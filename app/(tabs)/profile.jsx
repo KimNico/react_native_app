@@ -13,7 +13,7 @@ import { router } from 'expo-router'
 
 const Profile = () => {
   const {user, setUser, setIsLoggedIn} = useGlobalContext() 
-  const { data:posts ,refetch} =useAppwrite(()=>getUserPosts(user.$id))
+  const { data:posts } =useAppwrite(()=>getUserPosts(user.$id))
 
 
 const logout = async ()=>{
@@ -35,6 +35,7 @@ const logout = async ()=>{
       ListHeaderComponent={()=>(
         <View className="w-full justify-cente items-center mt-6 mb-12 px-4">
           <TouchableOpacity
+          onPress={logout}
           className="w-full items-end mb-10"
           >
             <Image
