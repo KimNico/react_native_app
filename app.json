@@ -18,9 +18,9 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff",
-        "package":"com.react_native.aora"
-      }
+        "backgroundColor": "#ffffff"
+      },
+      "package":"com.react_native.aora"
     },
     "web": {
       "favicon": "./assets/favicon.png"

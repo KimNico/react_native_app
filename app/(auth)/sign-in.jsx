@@ -1,4 +1,4 @@
-import { View, Text, SafeAreaView, ScrollView, Image, Alert } from 'react-native'
+import { View, Text, ScrollView, Image, Alert } from 'react-native'
 import React, { useState } from 'react'
 import { images } from '../../constants'
 import FormField from '../../components/FormField'
@@ -6,6 +6,7 @@ import CustomButton from '../../components/CustomButton'
 import { Link,router } from 'expo-router'
 import { getCurrentUser, signIn } from '../../lib/appwrite'
 import { useGlobalContext } from "../../context/GlobalProvider";
+import { SafeAreaView } from 'react-native-safe-area-context'
 
 
 const SignIn = () => {
@@ -27,7 +28,6 @@ const SignIn = () => {
       setUser(result);
       setIsLogged(true);
       router.replace('/home')
-      //set it to global state...
   } catch (error) {
       Alert.alert('Error',error.message)
     }finally{
